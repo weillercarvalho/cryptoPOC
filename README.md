@@ -1,4 +1,4 @@
-# README
+# Proof of concept for a crypto application maded in RoR.
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
