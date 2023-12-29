@@ -1,0 +1,4 @@
+<h1>Welcome</h1>
+<% value = %w[weiller sousa amaral carvalho mello] %>
+<% mapping = value.map{|map| map if map.length > 5}.compact %>
+<p> Mostre o valor <%= mapping %></p>
