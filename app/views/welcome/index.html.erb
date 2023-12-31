@@ -2,3 +2,8 @@
 <% value = %w[what a beautiful welcome] %>
 <% mapping = value.map{|map| map if map.length > 5}.compact %>
 <p> Mostre o valor <%= mapping %></p>
+<ul>
+    <li>
+        <%= link_to "Coins", coins_path %>
+    </li>
+</ul>
