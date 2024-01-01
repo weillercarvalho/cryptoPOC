@@ -1,6 +1,7 @@
 <h1>Welcome</h1>
+<p><strong>Date: </strong><%= date_br(Date.today) %></p>
 <% value = %w[what a beautiful welcome] %>
-<% mapping = value.map{|map| map if map.length > 5}.compact %>
+<% mapping = value.select{|map| map if map.length > 5} %>
 <p> Mostre o valor <%= mapping %></p>
 <ul>
     <li>
