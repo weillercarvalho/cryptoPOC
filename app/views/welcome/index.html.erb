@@ -1,10 +1,9 @@
-<h1>Welcome</h1>
+<h1>Welcome - Awkward POC that looks like a frankestein code.</h1>
 <p><strong>Date: </strong><%= date_br(Date.today) %></p>
 <% value = %w[what a beautiful welcome] %>
 <% mapping = value.select{|map| map if map.length > 5} %>
 <p> Mostre o valor <%= mapping %></p>
-<ul>
-    <li>
-        <%= link_to "Coins", coins_path %>
-    </li>
-</ul>
+<%= render 'menu' %>
+<p>
+    <%= @params %>
+</p>
