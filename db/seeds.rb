@@ -7,14 +7,6 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
-[
-  { description: 'Bitcoin', acronym: 'BTC', url_image: 'https://cryptologos.cc/logos/ethereum-eth-logo.png' },
-  { description: 'Dash', acronym: 'DASH', url_image: 'https://cryptologos.cc/logos/dash-dash-logo.png' },
-  { description: 'Solana', acronym: 'SOL', url_image: 'https://cryptologos.cc/logos/solana-sol-logo.png' }
-]
-  .each do |coin|
-  Coin.find_or_create_by!(coin)
-end
 
 [
   { description: 'Proof of Work', acronym: 'PoW' },
@@ -24,3 +16,14 @@ end
   .each do |mining|
   MiningType.find_or_create_by!(mining)
 end
+
+[
+  { description: 'Bitcoin', acronym: 'BTC', url_image: 'https://cryptologos.cc/logos/ethereum-eth-logo.png', mining_type: MiningType.find_by(acronym: 'PoW') },
+  { description: 'Dash', acronym: 'DASH', url_image: 'https://cryptologos.cc/logos/dash-dash-logo.png', mining_type: MiningType.find_by(acronym: 'PoS') },
+  { description: 'Solana', acronym: 'SOL', url_image: 'https://cryptologos.cc/logos/solana-sol-logo.png', mining_type: MiningType.find_by(acronym: 'PoC') }
+]
+  .each do |coin|
+  Coin.find_or_create_by!(coin)
+end
+
+
